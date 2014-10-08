@@ -8,11 +8,11 @@ public class Multiplicar extends Operacion{
     }
 
     public int operar() {
-        return this.lista.get(0).operar() * this.lista.get(1).operar();
+        return this.expresion1.operar() * this.expresion2.operar();
     }
 
     public String toString() {
-        return "("+this.lista.get(0).toString()+"*"+this.lista.get(1)+")";
+        return "("+this.expresion1.toString()+"*"+this.expresion2.toString()+")";
     }
 
 }

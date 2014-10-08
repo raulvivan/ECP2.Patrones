@@ -5,12 +5,12 @@ import java.util.List;
 
 public abstract class Operacion extends Expresion {
     
-    protected List<Expresion> lista;
+    protected Expresion expresion1;
+    protected Expresion expresion2;
     
     public Operacion(Expresion expresion1, Expresion expresion2){
-        lista = new ArrayList<Expresion>();
-        lista.add(expresion1);
-        lista.add(expresion2);
+        this.expresion1 = expresion1;
+        this.expresion2 = expresion2;
     }
     
     public abstract int operar();
