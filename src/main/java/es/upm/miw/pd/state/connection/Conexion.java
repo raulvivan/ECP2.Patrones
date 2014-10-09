@@ -19,7 +19,7 @@ public class Conexion {
         return estado.getEstado();
     }
 
-    public void setEstado(EstadoObjeto estado){
+    protected void setEstado(EstadoObjeto estado){
         this.estado = estado;
     }
     
