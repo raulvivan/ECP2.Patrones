@@ -1,10 +1,13 @@
 package es.upm.miw.pd.factoryMethod.naturalNumber;
 
 public abstract class NaturalNumber {
-    protected int value;
+    private int value;
     
-    public NaturalNumber(int value) {
+    private String[] text;
+    
+    public NaturalNumber(int value, String[] text) {
         this.value = value;
+        this.text = text;
     }
     
     public int getValue() {
@@ -20,5 +23,11 @@ public abstract class NaturalNumber {
         this.setValue(this.value + value);
     }
     
-    public abstract String getTextValue();
+    public String getTextValue() {
+        if (this.value < text.length) {
+            return text[this.value];
+        } else {
+            return "???";
+        }
+    }
 }
