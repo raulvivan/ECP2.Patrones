@@ -4,7 +4,7 @@ import upm.jbb.IO;
 
 public class ComandoImprimir extends ComandoOperacion{
 
-    public ComandoImprimir(Calculadora calculadora) {
+    public ComandoImprimir(Mementable<Memento> calculadora) {
         super(calculadora);
     }
 

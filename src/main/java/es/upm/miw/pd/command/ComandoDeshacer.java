@@ -4,18 +4,16 @@ import upm.jbb.IO;
 
 public class ComandoDeshacer extends ComandoOperacion{
     
-    public ComandoDeshacer(Calculadora calculadora) {
+    public ComandoDeshacer(Mementable<Memento> calculadora) {
         super(calculadora);
     }
 
-    @Override
     public void execute() {
         this.getCalculadora().deshacer();
         IO.out.clear();
         IO.out.println(this.getCalculadora().getAnteriorTotal());
     }
 
-    @Override
     public String name() {
         return "ComandoDeshacer";
     }

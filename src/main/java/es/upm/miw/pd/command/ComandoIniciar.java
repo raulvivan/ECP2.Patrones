@@ -4,7 +4,7 @@ import upm.jbb.IO;
 
 public class ComandoIniciar extends ComandoOperacion{
 
-    public ComandoIniciar(Calculadora calculadora) {
+    public ComandoIniciar(Mementable<Memento> calculadora) {
         super(calculadora);
     }
 

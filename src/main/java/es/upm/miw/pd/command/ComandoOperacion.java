@@ -2,13 +2,13 @@ package es.upm.miw.pd.command;
 
 public abstract class ComandoOperacion implements Comando{
     
-    private Calculadora calculadora;
+    private Calculadora2 calculadora;
     
-    public ComandoOperacion(Calculadora calculadora){
-        this.calculadora = calculadora;
+    public ComandoOperacion(Mementable<Memento> calculadora){
+        this.calculadora = (Calculadora2) calculadora;
     }
     
-    public Calculadora getCalculadora(){
+    public Calculadora2 getCalculadora(){
         return this.calculadora;
     }
 
