@@ -1,8 +1,5 @@
 package es.upm.miw.pd.composite.expression.solution;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public abstract class Operacion extends Expresion {
     
     protected Expresion expresion1;
