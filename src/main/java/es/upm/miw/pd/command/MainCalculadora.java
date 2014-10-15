@@ -18,20 +18,13 @@ public class MainCalculadora {
         this.gestor.add(new ComandoRestar(calc));
         this.gestor.add(new ComandoIniciar(calc));
         this.gestor.add(new ComandoImprimir(calc));
-        this.gestor.add(new ComandoDeshacer(calc));
+        this.gestor.add(new ComandoDeshacer(calc, gestorMementos));
+        this.gestor.add(new ComandoGuardar(calc, gestorMementos));
     }
 
     public void ejecutar() {
         String key = (String) IO.in.select(this.gestor.keys());
         this.gestor.execute(key);
-    }
-
-    public void createMemento() {
-        this.gestorMementos.addMemento(IO.in.readString("Nombre del Memento"), calc.createMemento());
-    }
-
-    public void restoreMemento() {
-        this.calc.restoreMemento(this.gestorMementos.getMemento((String) IO.in.select(gestorMementos.keys(), "Restaurar")));
     }
 
     public static void main(String[] args) {
